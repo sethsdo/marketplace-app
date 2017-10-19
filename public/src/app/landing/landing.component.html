@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-2"></div>
+    <button (click)="regSwitch()" class="col-xs-4"><h3>Login</h3></button>
+    <button (click)="logSwitch()" class="col-xs-4"><h3>Register</h3></button>
+    <div class="col-xs-2"></div>
+  </div>
+  <div class="row">
+    <div class="col-xs-2"></div>
+    <div *ngIf="log === true">
+      <app-login></app-login>
+    </div>
+    <div *ngIf="reg === true">
+      <app-registration></app-registration>
+    </div>
+    <div class="col-xs-2"></div>
+  </div>
+</div>

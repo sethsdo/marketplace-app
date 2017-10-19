@@ -3,8 +3,8 @@ const fs = require('fs');
 const path = require('path');
 
 // Connect to mongoose, Overwrite mpromise, mongoose's deprecated promise implementation
-const DBNAME = null
-// mongoose.connect(`mongodb://localhost/${DBNAME}`)
+const DBNAME = "userMarketPlace"
+mongoose.connect(`mongodb://localhost/${DBNAME}`)
 
 if(DBNAME) console.log(`Connected to ${DBNAME}`);
 else console.error("\x1b[31m%s\x1b[0m",`MONGOOSE STARTED \nBUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUT\n CONNECT TO THE DATABASE!`);
